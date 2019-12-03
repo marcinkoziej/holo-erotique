@@ -1,0 +1,19 @@
+<!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js -->
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
+<script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script> 
+<script src="aframe-ar.min.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam;'>
+    <a-assets>
+      <img id="sulta1" src="tease.gif"/>
+    </a-assets>
+		<a-box position='0 0.5 0' material='opacity: 0.1;'>
+      <a-entity geometry="primitive:plane" material="shader:gif;src:url(tease.gif); opacity: 0.7" rotation="-45 0 0"  gif=""></a-entity>
+ 
+      <!-- <a-image src="#sulta1" position="0 0 0" rotation="-45 0 0" material="opacity: 0.7"></a-image> -->
+      <!-- <a-entity position="1 0 0" scale="3 3 3" text="value: Czesc Kasiaaaa!;color:lightblue"></a-entity> -->
+    </a-box>
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
