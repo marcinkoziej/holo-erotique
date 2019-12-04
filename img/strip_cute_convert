@@ -2,7 +2,7 @@
 
 ffmpeg \
   -i strip_cute.mp4 \
-  -r 15 -ss 00:00:00 -to 00:00:26 \
+  -r 15 -ss 00:00:07.700 -to 00:00:13 \
   -vf scale=256:-1 -vf eq=saturation=0.1 \
     strip_cute.gif
 
