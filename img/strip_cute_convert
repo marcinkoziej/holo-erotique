@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ffmpeg \
+  -i strip_cute.mp4 \
+  -r 15 -ss 00:00:00 -to 00:00:26 \
+  -vf scale=256:-1 -vf eq=saturation=0.1 \
+    strip_cute.gif
+

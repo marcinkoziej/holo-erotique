@@ -1,13 +1,13 @@
 <!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js -->
-<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
-<script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script> 
-<script src="aframe-ar.min.js"></script>
+<script src="js/aframe.min.js"></script>
+<script src="js/aframe-gif-shader.min.js"></script> 
+<script src="js/aframe-gif-component.min.js"></script> 
+<script src="js/aframe-ar.min.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false'>
     <a-assets>
-      <img id="tease" src="tease.gif"/>
-      <img id="sulta1" src="sulta1.jpg"/>
+      <img id="tease" src="img/tease.gif"/>
+      <img id="sulta1" src="img/sulta1.jpg"/>
     </a-assets>
 
     <a-marker type="barcode" value="2">
