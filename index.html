@@ -1,56 +1,63 @@
-<!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js -->
-<script src="js/aframe.min.js"></script>
-<script src="js/aframe-gif-shader.min.js"></script> 
-<script src="js/aframe-gif-component.min.js"></script> 
-<!-- <script src="aframe-effects.min.js"></script> -->
-<script src="js/aframe-ar.min.js"></script>
-<body style='margin : 0px; overflow: hidden;'>
-	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63; debugUIEnabled: false' >
-    <a-assets>
-      <img id="tease" src="img/tease.gif"/>
-      <img id="sulta1" src="img/sulta1.jpg"/>
-      <img id="stripcute" src="img/strip_cute.gif"/>
-      <img id="peg" src="img/peg.gif"/>
-      <img id="maleorgasm" src="img/male-orgasm.gif"/>
-      <img id="malarka1" src="img/malarka1.jpg"/>
-    </a-assets>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Być może</title>
+    <script src="js/aframe.min.js"></script>
+    <script src="js/aframe-gif-shader.min.js"></script> 
+    <script src="js/aframe-gif-component.min.js"></script> 
+    <!-- <script src="aframe-effects.min.js"></script> -->
+    <script src="js/aframe-ar.min.js"></script>
+  </head>
+  <!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js -->
+  <body style='margin : 0px; overflow: hidden;'>
+	  <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63; debugUIEnabled: false' loading-screen="dotsColor: white; backgroundColor: black">
+      <a-assets>
+        <img id="tease" src="img/tease.gif"/>
+        <img id="sulta1" src="img/sulta1.jpg"/>
+        <img id="stripcute" src="img/strip_cute.gif"/>
+        <img id="peg" src="img/peg.gif"/>
+        <img id="maleorgasm" src="img/male-orgasm.gif"/>
+        <img id="malarka1" src="img/malarka1.jpg"/>
+      </a-assets>
 
-    <!-- <a-marker type="barcode" value="2"> -->
-		<!-- <a-box position='0 0.5 0' scale="1 1 1" material='opacity: 0.1;'> -->
-    <!-- <a-image src="#sulta1" position="0 2 0" scale="2 2 2" rotation="-45 0 0" material="opacity: 0.7"></a-image> -->
-    <!-- </a-box> -->
-    <!-- </a-marker> -->
-    
-    <a-marker type="barcode" value="3">
-		  <a-box position='0 0 0' scale="1 1 1" material='opacity: 0.1;'>
+      <!-- <a-marker type="barcode" value="2"> -->
+		  <!-- <a-box position='0 0.5 0' scale="1 1 1" material='opacity: 0.1;'> -->
+      <!-- <a-image src="#sulta1" position="0 2 0" scale="2 2 2" rotation="-45 0 0" material="opacity: 0.7"></a-image> -->
+      <!-- </a-box> -->
+      <!-- </a-marker> -->
+      
+      <a-marker type="barcode" value="3">
+		    <a-box position='0 0 0' scale="1 1 1" material='opacity: 0.1;'>
 
-        <a-image src="#malarka1" position="0 0 0" scale="4 4 4" rotation="-90 0 0" material="opacity: 1.0"></a-image>
-        <!-- <a-entity geometry="primitive:plane" position="0 2 0" scale="2 2 2" material="shader:gif;src: #tease; opacity: 0.7" rotation="-45 0 0"  gif=""></a-entity> -->
-      </a-box>
-    </a-marker>
+          <a-image src="#malarka1" position="0 0 0" scale="4 4 4" rotation="-90 0 0" material="opacity: 1.0"></a-image>
+          <!-- <a-entity geometry="primitive:plane" position="0 2 0" scale="2 2 2" material="shader:gif;src: #tease; opacity: 0.7" rotation="-45 0 0"  gif=""></a-entity> -->
+        </a-box>
+      </a-marker>
 
-    <a-marker type="barcode" value="5">
-		  <a-box position='0 0.5 0' scale="1 1 1" material='opacity: 0.1;'>
-        <a-entity geometry="primitive:plane" position="0 2 0" scale="2 2 2" material="shader:gif;src: #stripcute; opacity: 0.7" rotation="-90 0 0"  gif=""></a-entity>
-        
-      </a-box>
-    </a-marker>
+      <a-marker type="barcode" value="5">
+		    <a-box position='0 0.5 0' scale="1 1 1" material='opacity: 0.1;'>
+          <a-entity geometry="primitive:plane" position="0 2 0" scale="2 2 2" material="shader:gif;src: #stripcute; opacity: 0.7" rotation="-90 0 0"  gif=""></a-entity>
+          
+        </a-box>
+      </a-marker>
 
-    <a-marker type="barcode" value="1">
-		  <a-box position='0 0.5 0' scale="1 1 1" material='opacity: 0.1;'>
-        <a-entity geometry="primitive:plane" position="0 2 0" scale="2 2 2" material="shader:gif;src: #maleorgasm; opacity: 0.7" rotation="-45 0 0"  gif=""></a-entity>
-        
-      </a-box>
-    </a-marker>
+      <a-marker type="barcode" value="1">
+		    <a-box position='0 0.5 0' scale="1 1 1" material='opacity: 0.1;'>
+          <a-entity geometry="primitive:plane" position="0 2 0" scale="2 2 2" material="shader:gif;src: #maleorgasm; opacity: 0.7" rotation="-45 0 0"  gif=""></a-entity>
+          
+        </a-box>
+      </a-marker>
 
-    <a-marker type="barcode" value="2">
-		  <a-box position='0 0.5 0' scale="1 1 1" material='opacity: 0.1;'>
-        <a-entity geometry="primitive:plane" position="0 2 0" scale="2 2 2" material="shader:gif;src: #peg; opacity: 0.7" rotation="-90 0 0"  gif=""></a-entity>
-        
-      </a-box>
-    </a-marker>
+      <a-marker type="barcode" value="2">
+		    <a-box position='0 0.5 0' scale="1 1 1" material='opacity: 0.1;'>
+          <a-entity geometry="primitive:plane" position="0 2 0" scale="2 2 2" material="shader:gif;src: #peg; opacity: 0.7" rotation="-90 0 0"  gif=""></a-entity>
+          
+        </a-box>
+      </a-marker>
 
-    <a-entity camera></a-entity>
-		<!-- <a-marker-camera type="pattern" url="marker/0.png"></a-marker-camera> -->
-	</a-scene>
-</body>
+      <a-entity camera></a-entity>
+		  <!-- <a-marker-camera type="pattern" url="marker/0.png"></a-marker-camera> -->
+	  </a-scene>
+  </body>
+
+</html>
