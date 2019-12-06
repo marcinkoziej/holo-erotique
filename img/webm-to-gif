@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for i in $@; do
+ffmpeg -i $i -pix_fmt rgb24 `basename $i .webm`.gif
+done
+
